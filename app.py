@@ -59,40 +59,78 @@ st.header("🚀 Mes Projets Data")
 
 # --- Projet 2 : E-commerce SQL ---
 st.write("---")
-st.header("📊 Analyse E-commerce (SQL)")
+st.header("📊 E-commerce Data Analysis Project")
 
+# --- CONTEXT & OBJECTIVE ---
 with st.container():
-    st.subheader("Analyse des ventes et comportement client")
-    
     col1, col2 = st.columns([2, 1])
     
     with col1:
+        st.subheader("Project Overview")
         st.write("""
-        **Objectif :** Transformer des données transactionnelles brutes en insights stratégiques.
-        
-        **Points clés analysés :**
-        - Performance des catégories produits.
-        - Tendances temporelles des ventes (saisonnalité).
-        - Profils clients et rentabilité.
+        This project analyzes raw transactional data from the Brazilian market to extract actionable business insights. 
+        It covers the entire data pipeline: from SQL extraction and data cleaning with Pandas, to calculating KPIs and visualizing trends that drive strategic decision-making.
         """)
         
-        # Liste des questions comme dans ton texte
-        with st.expander("Voir les questions clés traitées"):
+        with st.expander("🛠️ Technical Stack & Methodology"):
             st.markdown("""
-            * Top 10 produits les plus vendus.
-            * Évolution mensuelle du chiffre d'affaires.
-            * Top catégories par revenu.
-            * Analyse de la marge par produit.
+            - **SQL:** Complex queries (JOINs, Aggregations, Window Functions).
+            - **Python:** Data cleaning, KPI calculation, and statistical analysis.
+            - **Visualization:** Matplotlib & Seaborn for pattern recognition.
+            - **Business Logic:** Seasonality analysis, customer segmentation, and payment habit profiling.
             """)
             
-        st.markdown("[🔗 Accéder au dépôt GitHub](https://github.com/wellydiallo/Personal-project-e-commerce-sales-analysis-sql)")
-
     with col2:
-        st.success("**Résultats marquants :**")
-        st.write("📈 Top 3 catégories : Health Beauty, Watches, Bed Table Bath.")
-        st.write("🗓️ Pic d'activité : Mai, Juillet, Août.")
+        st.success("**Key Metrics:**")
+        st.metric(label="Average Order Value", value="154.1 $")
+        st.write("🗓️ **Seasonality:** Peak activity in May, July, and August.")
 
 st.write("---")
+
+# --- COMPREHENSIVE BUSINESS ANALYSIS ---
+st.subheader("Strategic Business Insights")
+
+c1, c2 = st.columns(2)
+
+with c1:
+    st.write("**1. Product Strategy & Growth**")
+    st.info("""
+    My analysis revealed a strong correlation between product variety and sales volume. Top-performing categories, such as *Bed, Table & Bath*, succeed by offering a wide assortment. 
+    **Recommendation:** Prioritize these "star" categories for inventory planning and targeted advertising to maximize ROI.
+    """)
+    
+    st.write("**2. Payment Ecosystem**")
+    st.info("""
+    73% of transactions are processed via credit card. The high frequency of installment plans (up to 10 months) confirms that offering interest-free installments is the primary engine for conversion in Brazil, allowing customers to manage their household budgets effectively.
+    """)
+
+with c2:
+    st.write("**3. Operational Recommendations**")
+    st.info("""
+    - **Logistics:** Since delivery efficiency directly impacts customer satisfaction, I have calculated delivery performance metrics to identify potential bottlenecks.
+    - **Inventory:** Align marketing campaigns with identified seasonal peaks in May, July, and August to optimize stock turnover.
+    """)
+
+# --- FUTURE SCOPE: THE PROACTIVE APPROACH ---
+st.write("---")
+st.subheader("🚀 Future Scope: Data-Driven Evolution")
+st.write("""
+To move from descriptive to predictive analysis, I propose the following roadmap:
+""")
+
+col_a, col_b = st.columns(2)
+
+with col_a:
+    st.write("📍 **Geographic & Demographic Enrichment**")
+    st.write("By integrating location data, we can optimize regional logistics costs and develop hyper-local marketing campaigns.")
+
+with col_b:
+    st.write("🤖 **CRM & Seller Retention Strategy**")
+    st.write("Linking seller performance to contact data enables an automated CRM system: providing personalized monthly reports and loyalty programs for top-tier partners.")
+
+st.markdown("[🔗 View Project on GitHub](https://github.com/wellydiallo/Personal-project-e-commerce-sales-analysis-sql)")
+st.write("---")
+
 
 # Projet 1 : Titanic
 with st.container():
