@@ -57,6 +57,43 @@ with c4: st.error("**Outils** : Git, Streamlit")
 # --- SECTION PROJETS ---
 st.header("🚀 Mes Projets Data")
 
+# --- Projet 2 : E-commerce SQL ---
+st.write("---")
+st.header("📊 Analyse E-commerce (SQL)")
+
+with st.container():
+    st.subheader("Analyse des ventes et comportement client")
+    
+    col1, col2 = st.columns([2, 1])
+    
+    with col1:
+        st.write("""
+        **Objectif :** Transformer des données transactionnelles brutes en insights stratégiques.
+        
+        **Points clés analysés :**
+        - Performance des catégories produits.
+        - Tendances temporelles des ventes (saisonnalité).
+        - Profils clients et rentabilité.
+        """)
+        
+        # Liste des questions comme dans ton texte
+        with st.expander("Voir les questions clés traitées"):
+            st.markdown("""
+            * Top 10 produits les plus vendus.
+            * Évolution mensuelle du chiffre d'affaires.
+            * Top catégories par revenu.
+            * Analyse de la marge par produit.
+            """)
+            
+        st.markdown("[🔗 Accéder au dépôt GitHub](https://github.com/wellydiallo/Personal-project-e-commerce-sales-analysis-sql)")
+
+    with col2:
+        st.success("**Résultats marquants :**")
+        st.write("📈 Top 3 catégories : Health Beauty, Watches, Bed Table Bath.")
+        st.write("🗓️ Pic d'activité : Mai, Juillet, Août.")
+
+st.write("---")
+
 # Projet 1 : Titanic
 with st.container():
     st.subheader("🚢 Titanic : Prédiction de survie")
@@ -82,11 +119,3 @@ with st.container():
 
 st.write("") # Espace
 
-# Projet 2
-col_p2_img, col_p2_txt = st.columns([1, 2])
-with col_p2_img:
-    st.image("https://placehold.co/400x250?text=Analyse+SQL")
-with col_p2_txt:
-    st.subheader("Optimisation de base de données SQL")
-    st.write("Nettoyage et analyse d'un dataset de ventes retail pour identifier les produits les plus rentables.")
-    st.markdown("[Voir le code sur GitHub](https://github.com/wellydiallo)")
