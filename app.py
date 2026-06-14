@@ -21,18 +21,18 @@ st.markdown("""
 
 # --- SIDEBAR (Barre latérale) ---
 with st.sidebar:
-    st.image("https://cdn-icons-png.flaticon.com/512/6840/6840478.png", width=150) # Remplace par ta photo plus tard
+    st.image("moi.jpeg", width=150) # Remplace par ta photo plus tard
     st.title("Welly Diallo")
-    st.write("📍 Étudiante en IA & Big Data")
+    st.write("📍 Étudiante MSc Data Management")
     st.write("---")
     st.write("📫 **Contact :**")
     st.write("welly.diallo@email.com")
-    st.write("[LinkedIn](https://linkedin.com/in/ton-profil)")
+    st.write("[LinkedIn](https://www.linkedin.com/in/welly-diallo-ab9283320)")
     st.write("[GitHub](https://github.com/wellydiallo)")
     
     # Bouton pour télécharger le CV
     with open("app.py", "rb") as file: # Remplace par ton fichier CV.pdf plus tard
-        st.download_button(label="📄 Télécharger mon CV", data=file, file_name="CV_Welly_Diallo.pdf")
+        st.download_button(label="📄 Télécharger mon CV", data=file, file_name="WellyDiallo_DataAnalyst&BI_2026.pdf")
 
 # --- SECTION PRÉSENTATION ---
 col1, col2 = st.columns([2, 1])
