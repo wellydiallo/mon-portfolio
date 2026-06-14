@@ -40,7 +40,7 @@ with col1:
     st.title("Bonjour, je suis Welly 👋")
     st.subheader("Passionnée par l'extraction de valeur à partir des données.")
     st.write("""
-    Je suis actuellement étudiante en **IA et Big Data**. Mon objectif est de comprendre 
+    Future étudiante en **MSc Data Management**. Mon objectif est de comprendre 
     les enjeux complexes des données pour aider à la prise de décision. 
     Bienvenue sur mon espace où je partage mes projets et mes apprentissages !
     """)
@@ -49,10 +49,10 @@ with col1:
 st.write("---")
 st.header("🛠️ Compétences")
 c1, c2, c3, c4 = st.columns(4)
-with c1: st.info("**Langages** : Python, SQL")
-with c2: st.success("**Data** : Pandas, Numpy")
-with c3: st.warning("**IA** : Scikit-Learn, ML")
-with c4: st.error("**Outils** : Git, Streamlit")
+with c1: st.info("**Langages** : Python, SQL, R & R Studio, Java")
+with c2: st.success("**Data** : Pandas, Numpy, Matplotlib, Seaborn")
+with c3: st.warning("**IA** : Scikit-Learn, ML, MCP, OpenAI Code, Dust")
+with c4: st.error("**Outils** : Ecxel, Metabase, Git, Streamlit, Jupyter Notebook")
 
 # --- SECTION PROJETS ---
 st.header("🚀 Mes Projets Data")
