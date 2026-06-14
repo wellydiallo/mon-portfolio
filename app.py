@@ -26,7 +26,7 @@ with st.sidebar:
     st.write("📍 Étudiante MSc Data Management")
     st.write("---")
     st.write("📫 **Contact :**")
-    st.write("welly.diallo@email.com")
+    st.write("diallowelly620@gmail.com")
     st.write("[LinkedIn](https://www.linkedin.com/in/welly-diallo-ab9283320)")
     st.write("[GitHub](https://github.com/wellydiallo)")
     
