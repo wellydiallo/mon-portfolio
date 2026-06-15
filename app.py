@@ -182,49 +182,63 @@ with st.container():
 
         st.write("""
         Ce projet collaboratif visait à développer un modèle de Machine Learning pour prédire la survie des passagers du Titanic.  
-        Au-delà de la simple performance prédictive, l’objectif était d’identifier les déterminants socio-démographiques ayant influencé les chances de survie lors de ce naufrage historique.
+        L’objectif était d’identifier les facteurs socio-démographiques influençant les chances de survie lors de ce naufrage historique, tout en optimisant un classifieur de type K-Nearest Neighbors (KNN).
         """)
 
-        with st.expander("2. Méthodologie & rigueur technique"):
+        with st.expander("2. Environnement & outils"):
             st.markdown("""
-            **Traitement des données :**  
-            Nous avons traité les valeurs manquantes (notamment l’âge) via une imputation intelligente basée sur le titre des passagers (Mr, Mrs, Miss), plutôt qu’une moyenne globale, afin de préserver la cohérence des profils.
-
-            **Feature engineering :**  
-            Création de variables stratégiques comme la *taille de la famille* (à partir du nombre de parents/enfants et frères/sœurs).  
-            Ces nouvelles variables se sont révélées plus prédictives que les données brutes, soulignant l’importance de l’ingénierie des variables.
-
-            **Modélisation :**  
-            Comparaison de plusieurs algorithmes (Régression Logistique, Random Forest, XGBoost), avec sélection du modèle offrant le meilleur compromis entre performance et interprétabilité.
+            - Développement sur **Google Colab**
+            - Utilisation de **Python** et de ses bibliothèques (Pandas, NumPy, Scikit-learn)
+            - Implémentation d’un pipeline de Machine Learning complet
             """)
 
-        with st.expander("3. Résultats & interprétation métier"):
+        with st.expander("3. Méthodologie & optimisation du modèle KNN"):
             st.markdown("""
-            **Insights :**  
-            Le modèle confirme statistiquement que la classe sociale, le sexe et l’âge sont les variables les plus déterminantes dans la survie.
+            **Prétraitement des données :**  
+            - Gestion des valeurs manquantes avec prudence (notamment âge et Cabin)  
+            - Certaines variables comme *Cabin* n’ont pas été exploitées afin de limiter le risque d’overfitting  
 
-            **Indicateur clé :**  
-            L’optimisation a été réalisée sur le **Recall (sensibilité)** afin de minimiser les faux négatifs (cas de survivants non détectés), ce qui était prioritaire dans un contexte de survie.
+            **Optimisation du modèle KNN :**  
+            - Détermination du **nombre optimal de voisins (k)**  
+            - Test de différentes **pondérations des voisins (uniform / distance)**  
+            - Évaluation de plusieurs **métriques de distance** (euclidienne, manhattan, etc.)  
+            - Comparaison des performances selon différents paramètres du classifieur  
+
+            **Sélection du modèle :**  
+            - Recherche du meilleur compromis performance / généralisation  
+            - Validation sur les données d’entraînement et de test
             """)
 
-        with st.expander("4. Dimension collaborative & soft skills"):
+        with st.expander("4. Résultats & interprétation métier"):
             st.markdown("""
-            Ce projet a été réalisé en équipe, avec une gestion de version via Git/GitHub.  
-            Cette expérience a permis de renforcer la coordination des étapes de traitement des données et de garantir un pipeline de modélisation structuré, propre et reproductible.
+            - Le modèle KNN optimisé permet de prédire efficacement la survie des passagers  
+            - Les variables socio-démographiques restent les principaux facteurs explicatifs  
+            - Le choix des paramètres (k, distance, pondération) a un impact significatif sur les performances du modèle  
+            """)
+
+        with st.expander("5. Perspectives d’amélioration"):
+            st.markdown("""
+            Si le projet avait été prolongé :
+
+            - Exploration de techniques de **réduction de dimension (PCA)** pour améliorer les performances et comprendre l’importance des variables  
+            - Approfondissement d’un modèle de **régression logistique** déjà initié pour comparaison  
+            - Meilleure exploitation des variables comme *Cabin* avec des techniques d’imputation plus avancées  
+            - Réduction du risque d’overfitting via des stratégies de régularisation et validation croisée plus poussée  
             """)
 
     with col2:
         st.success("**Résumé projet**")
 
         st.write("🎯 Objectif : prédire la survie des passagers")
-        st.write("🧠 ML : Logistique, Random Forest, XGBoost")
-        st.write("📊 KPI : Recall optimisé")
-        st.write("🔧 Feature engineering avancé")
-        st.write("👥 Travail en équipe (Git/GitHub)")
+        st.write("📌 Modèle : K-Nearest Neighbors (KNN)")
+        st.write("⚙️ Optimisation : k, distance, pondération")
+        st.write("🧪 Tests : différentes métriques de distance")
+        st.write("💻 Outils : Python, Google Colab, Scikit-learn")
+        st.write("👥 Travail en équipe")
 
 st.info("""
 💡 **Conclusion métier :**  
-La survie dépend principalement de facteurs sociaux (classe, sexe, âge), illustrant l’impact des inégalités sociales dans les probabilités de survie.
+La performance du modèle dépend fortement du choix des hyperparamètres du KNN, montrant l’importance de l’optimisation et de la validation dans les modèles basés sur la distance.
 """)
 
 st.markdown("[🔗 Voir le projet sur GitHub](https://github.com/wellydiallo/titanic-ml-project)")
