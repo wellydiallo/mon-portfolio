@@ -146,7 +146,7 @@ st.write("Insight: Credit cards are the dominant payment method, reflecting Braz
 
 # 3. Installment Distribution
 st.subheader("3. Installment Plans (The Credit Tool)")
-st.image("5.png", caption="Most users pay in 1 installment, but a significant portion uses 2-10 installments.")
+st.image("1.png", caption="Most users pay in 1 installment, but a significant portion uses 2-10 installments.")
 st.write("Insight: Credit flexibility is a key driver for conversion. Offering interest-free installments is essential.")
 
 # 4. Top 10 Product Categories (Revenue Share)
@@ -156,7 +156,7 @@ st.write("Insight: Focus marketing budget and inventory efforts on these high-pe
 
 # 5. Top 10 Most Active Customers
 st.subheader("5. Active Customer Analysis")
-st.image("1.png", caption="The distribution of top customers by order count.")
+st.image("3.png", caption="The distribution of top customers by order count.")
 
 # --- LE POINT STRATÉGIQUE ---
 st.warning("""
