@@ -171,6 +171,9 @@ Without **demographic data** (age, location, interests), we cannot:
 
 
 
+st.write("---")
+st.write("---")
+st.write("") # Espace
 
 
 # Projet 1 : Titanic
@@ -197,4 +200,3 @@ with st.container():
             """)
 
 st.write("") # Espace
-
