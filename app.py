@@ -136,7 +136,7 @@ st.header("📈 Data Analysis & Strategic Visualizations")
 
 # 1. Monthly Sales Trend
 st.subheader("1. Monthly Sales Trend")
-st.image("3.png", caption="Sales peaked in 2017-2018. The sudden drop reflects the dataset's end date.")
+st.image("5.png", caption="Sales peaked in 2017-2018. The sudden drop reflects the dataset's end date.")
 st.write("Insight: Seasonality helps in planning inventory and marketing campaigns.")
 
 # 2. Payment Distribution
