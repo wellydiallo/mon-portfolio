@@ -131,6 +131,47 @@ with col_b:
 st.markdown("[🔗 View Project on GitHub](https://github.com/wellydiallo/Personal-project-e-commerce-sales-analysis-sql)")
 st.write("---")
 
+st.write("---")
+st.header("📈 Data Analysis & Strategic Visualizations")
+
+# 1. Monthly Sales Trend
+st.subheader("1. Monthly Sales Trend")
+st.image("1.png", caption="Sales peaked in 2017-2018. The sudden drop reflects the dataset's end date.")
+st.write("Insight: Seasonality helps in planning inventory and marketing campaigns.")
+
+# 2. Payment Distribution
+st.subheader("2. Payment Methods")
+st.image("4.png", caption="73.9% of customers use credit cards.")
+st.write("Insight: Credit cards are the dominant payment method, reflecting Brazilian purchasing habits.")
+
+# 3. Installment Distribution
+st.subheader("3. Installment Plans (The Credit Tool)")
+st.image("5.png", caption="Most users pay in 1 installment, but a significant portion uses 2-10 installments.")
+st.write("Insight: Credit flexibility is a key driver for conversion. Offering interest-free installments is essential.")
+
+# 4. Top 10 Product Categories (Revenue Share)
+st.subheader("4. Top Revenue Categories")
+st.image("2.png", caption="Top categories like Health Beauty and Watches drive the majority of revenue.")
+st.write("Insight: Focus marketing budget and inventory efforts on these high-performing categories.")
+
+# 5. Top 10 Most Active Customers
+st.subheader("5. Active Customer Analysis")
+st.image("3.png", caption="The distribution of top customers by order count.")
+
+# --- LE POINT STRATÉGIQUE ---
+st.warning("""
+**💡 Strategic Limitation:** Looking at the 'Top 10 Active Customers' chart, we can identify *who* they are by ID, but we cannot **act** on this information. 
+Without **demographic data** (age, location, interests), we cannot:
+- Personalize our communication.
+- Implement loyalty programs tailored to specific segments.
+- Understand *why* these customers are repeat buyers.
+
+**Next Step:** Integrating demographic and contact data is critical to transform this descriptive analysis into a proactive CRM strategy.
+""")
+
+
+
+
 
 # Projet 1 : Titanic
 with st.container():
