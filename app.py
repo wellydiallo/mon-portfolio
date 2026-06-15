@@ -170,32 +170,62 @@ Without **demographic data** (age, location, interests), we cannot:
 """)
 
 
-
 st.write("---")
-st.write("---")
+st.header("🚢 Modélisation prédictive de la survie (Titanic)")
 
-
-# Projet 1 : Titanic
 with st.container():
-    st.subheader("🚢 Titanic : Prédiction de survie")
-    st.write("**Objectif :** Prédire la survie des passagers via Machine Learning.")
-    
-    col1, col2 = st.columns([1, 1])
+    col1, col2 = st.columns([2, 1])
+
     with col1:
-        st.markdown("""
-        **Outils :** Python, Pandas, Scikit-learn, Seaborn
-        **Résultats :** 94% de précision avec KNN.
+
+        st.subheader("1. Problématique & objectifs")
+
+        st.write("""
+        Ce projet collaboratif visait à développer un modèle de Machine Learning pour prédire la survie des passagers du Titanic.  
+        Au-delà de la simple performance prédictive, l’objectif était d’identifier les déterminants socio-démographiques ayant influencé les chances de survie lors de ce naufrage historique.
         """)
-        st.markdown("[🔗 Voir le code sur GitHub](https://github.com/wellydiallo/Projet-Titanic)")
-    
-    with col2:
-        # Utilise un expander pour les détails techniques
-        with st.expander("Voir la méthodologie"):
-            st.write("""
-            1. **Nettoyage :** Traitement des valeurs manquantes.
-            2. **Analyse :** Étude des corrélations âge/sexe/classe.
-            3. **Feature Engineering :** Création de nouvelles variables pertinentes.
-            4. **Modélisation :** Comparaison entre Régression Logistique et KNN.
+
+        with st.expander("2. Méthodologie & rigueur technique"):
+            st.markdown("""
+            **Traitement des données :**  
+            Nous avons traité les valeurs manquantes (notamment l’âge) via une imputation intelligente basée sur le titre des passagers (Mr, Mrs, Miss), plutôt qu’une moyenne globale, afin de préserver la cohérence des profils.
+
+            **Feature engineering :**  
+            Création de variables stratégiques comme la *taille de la famille* (à partir du nombre de parents/enfants et frères/sœurs).  
+            Ces nouvelles variables se sont révélées plus prédictives que les données brutes, soulignant l’importance de l’ingénierie des variables.
+
+            **Modélisation :**  
+            Comparaison de plusieurs algorithmes (Régression Logistique, Random Forest, XGBoost), avec sélection du modèle offrant le meilleur compromis entre performance et interprétabilité.
             """)
 
-st.write("") # Espace
+        with st.expander("3. Résultats & interprétation métier"):
+            st.markdown("""
+            **Insights :**  
+            Le modèle confirme statistiquement que la classe sociale, le sexe et l’âge sont les variables les plus déterminantes dans la survie.
+
+            **Indicateur clé :**  
+            L’optimisation a été réalisée sur le **Recall (sensibilité)** afin de minimiser les faux négatifs (cas de survivants non détectés), ce qui était prioritaire dans un contexte de survie.
+            """)
+
+        with st.expander("4. Dimension collaborative & soft skills"):
+            st.markdown("""
+            Ce projet a été réalisé en équipe, avec une gestion de version via Git/GitHub.  
+            Cette expérience a permis de renforcer la coordination des étapes de traitement des données et de garantir un pipeline de modélisation structuré, propre et reproductible.
+            """)
+
+    with col2:
+        st.success("**Résumé projet**")
+
+        st.write("🎯 Objectif : prédire la survie des passagers")
+        st.write("🧠 ML : Logistique, Random Forest, XGBoost")
+        st.write("📊 KPI : Recall optimisé")
+        st.write("🔧 Feature engineering avancé")
+        st.write("👥 Travail en équipe (Git/GitHub)")
+
+st.info("""
+💡 **Conclusion métier :**  
+La survie dépend principalement de facteurs sociaux (classe, sexe, âge), illustrant l’impact des inégalités sociales dans les probabilités de survie.
+""")
+
+st.markdown("[🔗 Voir le projet sur GitHub](https://github.com/wellydiallo/titanic-ml-project)")
+st.write("---")
