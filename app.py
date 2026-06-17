@@ -107,8 +107,8 @@ with c1:
 with c2:
     st.write("**3. Operational Recommendations**")
     st.info("""
-    - **Logistics:** Since delivery efficiency directly impacts customer satisfaction, I have calculated delivery performance metrics to identify potential bottlenecks.
-    - **Inventory:** Align marketing campaigns with identified seasonal peaks in May, July, and August to optimize stock turnover.
+- **Customer Engagement:** I identified the 'Top 10 most active clients' to highlight high-value users, though demographic enrichment is needed to unlock personalized CRM actions.
+- **Inventory:** Align marketing campaigns with identified seasonal peaks in May, July, and August to optimize stock turnover.
     """)
 
 # --- FUTURE SCOPE: THE PROACTIVE APPROACH ---
